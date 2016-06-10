@@ -1,0 +1,5 @@
+{
+  "default": {
+    "enterprise.app": "bower_components/binarta.enterprise.app.angular/src/enterprise.app.js"
+  }
+}

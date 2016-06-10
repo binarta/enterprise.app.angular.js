@@ -1,0 +1,19 @@
+{
+  "name": "binarta.enterprise.app.angular",
+  "main": [
+    "./src/enterprise.app.js",
+    "./sources.json"
+  ],
+  "dependencies": {
+    "binarta.professional.app.angular": "0.*.*",
+    "binarta.shop.angular": "0.*.*"
+
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
