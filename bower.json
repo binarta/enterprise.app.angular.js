@@ -5,7 +5,7 @@
     "./sources.json"
   ],
   "dependencies": {
-    "binarta.professional.app.angular": "0.*.*",
+    "binarta.professional.app.angular": "git@github.com:binarta/professional.app.angular.js.git#cfi",
     "binarta.shop.angular": "1.*.*"
   },
   "ignore": [
