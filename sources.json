@@ -4,5 +4,8 @@
   },
   "shop":{
     "binarta-gateways": "bower_components/binarta.enterprise.app.angular/src/binarta-gateways.js"
+  },
+  "e2e": {
+    "binarta-gateways": "bower_components/binarta.enterprise.app.angular/src/binarta-gateways-inmem.js"
   }
 }
