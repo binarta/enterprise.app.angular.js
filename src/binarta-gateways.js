@@ -5,6 +5,9 @@
     angular.module('binarta-checkpointjs-gateways-angular1', ['binarta-checkpointjs-rest-angular1'])
         .provider('binartaCheckpointGateway', ['restBinartaCheckpointGatewayProvider', proxy]);
 
+    angular.module('binarta-publisherjs-gateways-angular1', ['binarta-publisherjs-rest-angular1'])
+        .provider('binartaPublisherGateway', ['restBinartaPublisherGatewayProvider', proxy]);
+
     angular.module('binarta-shopjs-gateways-angular1', ['binarta-shopjs-rest-angular1'])
         .provider('binartaShopGateway', ['restBinartaShopGatewayProvider', proxy]);
 
@@ -16,7 +19,8 @@
         'binarta-applicationjs-gateways-angular1',
         'binarta-checkpointjs-gateways-angular1',
         'binarta-shopjs-gateways-angular1',
-        'binarta-humanresourcesjs-gateways-angular1'
+        'binarta-humanresourcesjs-gateways-angular1',
+        'binarta-publisherjs-gateways-angular1'
     ])
         .run([
             '$q',
@@ -25,6 +29,7 @@
             'binartaCheckpointGatewayIsInitialised',
             'binartaShopGatewayIsInitialised',
             'binartaHumanResourcesGatewayIsInitialised',
+            'binartaPublisherGatewayIsInitialised',
             IsInitialised
         ]);
 
@@ -33,7 +38,7 @@
     }
 
     function IsInitialised($q, gatewaysAreInitialised, applicationGateway, checkpointGateway, shopGateway, humanResourcesGateway) {
-        $q.all(applicationGateway.promise, checkpointGateway.promise, shopGateway.promise, humanResourcesGateway.promise).then(function() {
+        $q.all(applicationGateway.promise, checkpointGateway.promise, shopGateway.promise, humanResourcesGateway.promise, publisherGateway).then(function() {
             gatewaysAreInitialised.resolve();
         });
     }
