@@ -37,8 +37,8 @@
         return gateway;
     }
 
-    function IsInitialised($q, gatewaysAreInitialised, applicationGateway, checkpointGateway, shopGateway, humanResourcesGateway) {
-        $q.all(applicationGateway.promise, checkpointGateway.promise, shopGateway.promise, humanResourcesGateway.promise, publisherGateway).then(function() {
+    function IsInitialised($q, gatewaysAreInitialised, applicationGateway, checkpointGateway, shopGateway, humanResourcesGateway, publisherGateway) {
+        $q.all(applicationGateway.promise, checkpointGateway.promise, shopGateway.promise, humanResourcesGateway.promise, publisherGateway.promise).then(function() {
             gatewaysAreInitialised.resolve();
         });
     }
